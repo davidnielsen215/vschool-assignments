@@ -1,0 +1,24 @@
+header{
+    text-align: center;
+    font-family:  Georgia, 'Times New Roman', Times, serif
+}   
+h1 {
+text-align: center;
+color: darkgreen;
+font-family: Georgia, 'Times New Roman', Times, serif
+}
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: purple;
+}
+img {
+    float: left;
+    margin: 20px;
+}
+
+p, li {
+font-size: 25px;
+line-height: 50px;
+padding: 10px;
+}
