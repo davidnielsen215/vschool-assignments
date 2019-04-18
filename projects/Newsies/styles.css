@@ -1,0 +1,46 @@
+body{
+    background-color: black
+}
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 75px;
+    background-color: rgb(73, 140, 196);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+} 
+p{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    padding:10px;
+    margin:5px;
+
+} 
+ .amazonPolitics{
+    color: rgb(102, 183, 245);
+    text-align: left;
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+}
+.amazonPolitics2{
+    color: rgb(245, 215, 135);
+    text-align: left;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#amazonPicture{
+    height: 300px;
+    width: 400px;
+    align-self: right;
+    display: block;
+    margin-left: auto;
+    margin-right: inherit;
+    padding: 20px;
+}
+.blockDesign{
+    display: inline-block;
+    width: 31vw;
+}
