@@ -1,0 +1,50 @@
+/* *{
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+} */
+
+.header{
+    /* width: 100%; */
+    padding: 10px;
+    font-size: 27px;
+    text-align: center;
+    background: rgb(114, 4, 4);
+    position: top;
+    color:rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+#main-navbar{
+    background-color: rgb(0, 0, 0);
+  width: 25%;
+  height: 33px;
+  padding: 2px;
+  text-align: center;
+  position: fixed;
+
+}
+
+.card {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    margin:25px;
+    border:25px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    width: 400px;
+    height: 600px;
+    left: 25%;
+}
+.title{
+    font-size: 20pt;
+}
+.bushpic{
+    display: inline-block;
+    width: 10px;
+}
+
+img {
+    width: 600px;
+}
