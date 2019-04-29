@@ -1,0 +1,14 @@
+#button {
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    border: 8px solid rgb(48, 230, 48);
+    left: 30%;
+}
+h1{
+    width: 100%;
+    min-height: 200px;
+}
+body{
+    background-color: black
+}

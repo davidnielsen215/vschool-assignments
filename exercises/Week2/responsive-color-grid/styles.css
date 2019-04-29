@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    font-size:0px;
+    margin: 0;
+}
+
+.box-container{
+    height: 500px;
+    width: 700px;
+    background: white;
+    position: fixed;
+    top: 30pt;
+   
+}
+.box-container div{
+    display: inline-block;
+    height: 120px;
+    border: solid;
+    border-color: white;
+    border-spacing: 1px;
+
+}
+
+
+.box1{
+   
+    background:#F5C6D6;
+    width: 100%;
+
+}
+.box2{
+    width: 25%;
+    background: #EE2E84
+}
+
+.box6{
+    width: 50%;
+    background:#85CFD8;
+}
+
+.box7{
+    width: 75%;
+    background: #8DC63F;
+}
+
+.box8{
+    width: 25%;
+    background: #E76E34;
+}
+@media (max-width: 768px){
+    .cool{
+    width: 100vw;
+    }
+}

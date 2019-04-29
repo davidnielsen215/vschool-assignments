@@ -1,0 +1,32 @@
+body{
+    position: fixed;
+    left: 35%;
+}
+
+.container {
+    border: 3px solid red;
+    height: 100px;
+    width: 300px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+h1{
+    color: blue;
+    text-align: center;
+
+}
+/* .container1 {
+    border: 3px red;
+    height: 100px;
+    width: 300px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.container2 {
+    border: 3px red;
+    height: 100px;
+    width: 300px;
+    padding-top: 30px;
+    padding-left: 10px;
+} */
+
