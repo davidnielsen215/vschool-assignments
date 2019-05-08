@@ -7,11 +7,11 @@ console.log('whats up ' + username + '!');
 function Player (username){
     this.name = username;
     this.hp = 100;
-    this.inventory = 'flameThrower';
+    this.inventory = 'Glock';
     this.isAlive = true;
     this.hasWon = false;
     this.attack = function(){
-        return Math.floor(Math.random() * 10) + 6
+        return Math.floor(Math.random() * 25) + 5
     }
 }
 
@@ -21,36 +21,42 @@ function Fed (name, hp, num){
     this.name = name;
     this.hp = hp;
     this.attack = function(){
-        return Math.floor(math.random() * num) + 2
+        return Math.floor(Math.random() * num) + 2
     };
 }
 
-const DEA = new Fed ('DEA', 175, 15)
-const HomelandSecurity = new Fed ('Homeland Security', 200, 20)
-const CIA = new Fed ('CIA', 210, 35)
+const DEA = new Fed ('DEA', 100, 5)
+const HomelandSecurity = new Fed ('Homeland Security', 100, 8)
+const CIA = new Fed ('CIA', 100, 9)
 
 const feds = [DEA, HomelandSecurity, CIA,]
 
 
 
+
 while(!you.hasWon && you.isAlive){
-    let action = ask.keyIn('cruise around with [w], turn yourself in with [t]', {limit: 'wt'} )
+    let action = ask.keyIn('cruise around with [w], check inventory with [i]', {limit: 'wi'} )
     if (action === 'w'){
         cruise()
-    } else{
-        you.isAlive = false
+    } else {
+        console.log(`Your inventory is ${you.inventory}`)
     }
-        
 }
+
+while(feds.hp < 0){
+    win()
+}
+
 function cruise () {
     let random = Math.floor(Math.random() * 4) + 1
     if(random < 4){
         console.log('business is going smooth')
     }
      else {
-            fedsAreHere()
+            fedsAreHere()       
     }
 }
+
 
 function fedsAreHere(){
     let Fed = feds [Math.floor(Math.random() * feds.length)]
@@ -58,19 +64,50 @@ function fedsAreHere(){
     if (action === 'x') {
          runAway()
     }else{
-        while(enemy.hp > 0 && you.hp > 0){
+        while(Fed.hp > 0 && you.hp > 0){
             fight(Fed)
-        }   
+        }  
+    }
+}
+function runAway(){
+    if (Math.random() < .5) {
+        console.log('Nice, you got away. Coward');
+        cruise()
+    }else{
+        console.log("You didn't get away");
     }
 }
 
-function fight(Fed){
-let random = Math.floor(Math.random()*4) +1
-if (random === 2) {
-    console.log ("you're a horrible shot!")
-} else{
-    enemy.hp -= you.attack()
-    you.hp -= Fed.attack()
-    copnsole.log(`${Fed.name} landed a shot in you. ${you.name}'s hp is now ${you.hp}. ${Fed.name}'s hp is now ${Fed.hp}`)
+function fight(Fed, index){
+    while (Fed.hp > 0 && you.hasWon === false ){
+        if (you.hp <= 0){
+            death()
+            }let random = Math.floor(Math.random()*5) +1
+        if (random === 2) {
+            console.log ("you missed!")
+        } else {    
+            Fed.hp -= you.attack()
+            you.hp -= Fed.attack()
+            console.log(`${Fed.name} busted a cap in you. ${you.name}'s hp is now ${you.hp}. ${Fed.name} got shot and hp is now ${Fed.hp}`)
+    }
+    } if (Fed.hp < 0){
+        fedDie();
+    } else{
+        win()
+    }
+    }
+
+
+function death(){
+    you.isAlive === false;
+    console.log('you died');
 }
+
+function fedDie(index){
+    console.log(`You Took Them Out!`)
+    feds.splice(index , 0);
+}
+function win(){
+    (you.hasWon === true)
+    console.log("You Won")
 }
