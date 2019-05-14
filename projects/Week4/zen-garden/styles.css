@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background:  black;
+}
+
+.header{
+    background: #333;
+    height: 230pt;
+    width: 100%;
+}
+
+.content{
+    background: #444;
+    height: 250pt;
+    width: 100%;
+}
+
+.footer{
+    background: #544;
+    height: 250pt;
+    width: 100%;
+}
+
+.links{
+    background: #644;
+    height:  250pt;
+    width: 100%;
+}
+
+@media(min-width: 1130px){
+    body{
+        display: grid;
+        /* grid-template-columns: 2fr 1fr ; */
+        /* grid-template-rows: 250pt 500pt 500pt; */
+    }
+.header{
+  background:  red;
+} 
+}
