@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box
+}
+
+body{
+    background-color: orange;
+}
+div{
+    color:white;
+    text-align: center;
+}
+p{
+    color: green;
+    text-emphasis: bold;
+    font-size: 50px;
+}
+h1{
+    color: red;
+    text-emphasis: bold;
+    font-size: 50px;
+}
+
+
+/* 
+button{
+    display: inline-block;
+    align-content: center;
+    padding: 10px;
+    align-items: flex-start;
+    text-align: center;
+}
+.button:hover{
+    background-color: rgb(11, 50, 134);
+    transition-duration: 0.5s;
+} */
+.button{
+    background-color: rgb(54, 69, 119);
+    padding-top: 10px;
+    height: 50px;
+    width: 20vw;
+    border: solid 2px white;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+
+   
+    
+}
+.button:hover{
+    background-color: rgb(6, 97, 243);
+    transition-duration: 0.4s;
+   
+}
