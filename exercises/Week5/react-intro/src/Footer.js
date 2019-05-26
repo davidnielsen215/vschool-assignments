@@ -1,11 +1,11 @@
 import React from 'react'
 
 function Footer () {
-    return(
+    return (
         <div>
-            <h1>This is the end of my Story GTFO</h1>
+            <h1 style={{backgroundColor: 'red'}}>This is the end of my webpage hope you had fun looking at this garbage.</h1>
         </div>
     )
 }
 
-export default Footer
+export default Footer;

@@ -25,9 +25,9 @@ function Fed (name, hp, num){
     };
 }
 
-const DEA = new Fed ('DEA', 100, 5)
-const HomelandSecurity = new Fed ('Homeland Security', 100, 8)
-const CIA = new Fed ('CIA', 100, 9)
+var DEA = new Fed ('DEA', 100, 5)
+var HomelandSecurity = new Fed ('Homeland Security', 100, 8)
+var CIA = new Fed ('CIA', 100, 9)
 
 const feds = [DEA, HomelandSecurity, CIA,]
 
@@ -43,7 +43,7 @@ while(!you.hasWon && you.isAlive){
     }
 }
 
-while(feds.hp < 0){
+while(feds.DEA.hp < 0 && feds.HomelandSecurity.hp < 0 && feds.CIA.hp < 0){
     win()
 }
 
@@ -69,6 +69,7 @@ function fedsAreHere(){
         }  
     }
 }
+
 function runAway(){
     if (Math.random() < .5) {
         console.log('Nice, you got away. Coward');
@@ -78,36 +79,33 @@ function runAway(){
     }
 }
 
-function fight(Fed, index){
-    while (Fed.hp > 0 && you.hasWon === false ){
+    function fight(Fed){
+        while (Fed.hp > 0 && you.hasWon === false ){
         if (you.hp <= 0){
             death()
-            }let random = Math.floor(Math.random()*5) +1
+        }
+            let random = Math.floor(Math.random()*5) +1
         if (random === 2) {
             console.log ("you missed!")
         } else {    
             Fed.hp -= you.attack()
             you.hp -= Fed.attack()
             console.log(`${Fed.name} busted a cap in you. ${you.name}'s hp is now ${you.hp}. ${Fed.name} got shot and hp is now ${Fed.hp}`)
+        } if (Fed.hp < 0){
+             fedDie();
+        } 
     }
-    } if (Fed.hp < 0){
-        fedDie();
-    } else{
-        win()
-    }
-    }
-
-
-function death(){
-    you.isAlive === false;
-    console.log('you died');
 }
+    function death(){
+        you.isAlive === false;
+        console.log('you died'); 
+    }
 
-function fedDie(index){
+    function fedDie(){
     console.log(`You Took Them Out!`)
-    feds.splice(index , 0);
+    feds.splice();
 }
-function win(){
+    function win() {
     (you.hasWon === true)
     console.log("You Won")
 }

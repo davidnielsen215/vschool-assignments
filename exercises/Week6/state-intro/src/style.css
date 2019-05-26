@@ -1,0 +1,19 @@
+.container{
+    text-align: center;
+    border: 5px solid black;
+    display: flex;
+}
+
+.btn{
+    width:100px;
+    height:33px;
+    color: white;
+    background-color: rgb(48, 73, 155);
+    font-size: 100%;
+    display: grid;
+    align-content: center;
+}
+
+.btn:hover{
+    background-color: red
+}

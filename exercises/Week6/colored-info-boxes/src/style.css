@@ -1,0 +1,17 @@
+
+ 
+body{
+    display: grid;
+    background:white(245, 245, 179);
+}
+
+.color-container{
+    border: 1px solid black;
+    margin: 3px white;
+    width:100vw;
+    height:25vh;
+    text-align: center;
+    color: rgb(5, 5, 5);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
