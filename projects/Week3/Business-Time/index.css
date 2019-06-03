@@ -1,5 +1,10 @@
 *{
     box-sizing: border-box;
+    text-decoration: none;
+
+}
+body{
+    background-color: black;
 }
 .button{
     background-color: rgb(54, 69, 119);
@@ -7,7 +12,7 @@
     height: 50px;
     width: 20vw;
     border: solid 2px white;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     text-align: center;
     cursor: pointer;
@@ -53,9 +58,9 @@
     grid-template-columns: 1fr 1fr 1fr
 }
 .bg-image {
-    background-image: url("homepage_tie.jpeg");
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px); */
+    background-image: url("homepageTie.jpg");
+    filter: blur(px);
+    -webkit-filter: blur(4px);
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;

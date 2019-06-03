@@ -8,7 +8,10 @@ axios.get('https://api.vschool.io/David/todo/').then((response) => {
 
 
 
-function displayTodos(todos){
+function displayTodos(todos, updated){
+    if(updated){
+        main.innerHTML = ''
+    }
     todos.forEach((todo)=>{
         let main = document.getElementById('main')
         let parentDiv = document.createElement('div')
@@ -18,7 +21,6 @@ function displayTodos(todos){
         let imgUrl = document.createElement("img")
         let deleteBtn = document.createElement("button")
         let checkBox = document.createElement("input")
-
 
         deleteBtn.innerText = "Delete"
         priceP.innerText = todo.price;
@@ -33,15 +35,15 @@ function displayTodos(todos){
 
         deleteBtn.addEventListener("click", function(){
             parentDiv.style.display = 'none';
-            axios.delete(`https://api.vschool.io/David/todo/${todo._id}`);
+            axios.delete(`https://api.vschool.io/David/todo/${todo._id}`).then((response)=> {
+                // splice todo out of todoList
+                let index = todos.indexOf(todo)
+                todos.splice(index, 1)
+            })
         })
 
         checkBox.addEventListener("click", function(){
             checkTodo(todo)
-            axios.put(`https://api.vschool.io/David/todo/${todo._id}`, {completed: true}).then(res => {
-                todoList = res.data
-            })
-
         })
         if (todo.completed){
             checkBox.checked = true
@@ -65,6 +67,7 @@ function displayTodos(todos){
 
 const checkTodo = oldTodo => {
     axios.put(`https://api.vschool.io/David/todo/${oldTodo._id}`, {completed: !oldTodo.completed}).then((response) =>{
+        console.log(todoList)
     const newList = todoList.map(todo => todo._id === oldTodo._id ? response.data : todo)
     displayTodos(newList, true)
     })

@@ -43,27 +43,27 @@ while(!you.hasWon && you.isAlive){
     }
 }
 
-while(feds.DEA.hp < 0 && feds.HomelandSecurity.hp < 0 && feds.CIA.hp < 0){
-    win()
-}
-
 function cruise () {
     let random = Math.floor(Math.random() * 4) + 1
     if(random < 4){
         console.log('business is going smooth')
     }
      else {
-            fedsAreHere()       
+        if(feds.length !== 0){
+            fedsAreHere()   
+        }else {
+            win()
+        }
     }
 }
 
 
 function fedsAreHere(){
-    let Fed = feds [Math.floor(Math.random() * feds.length)]
+    let Fed = feds[Math.floor(Math.random() * feds.length)]
     let action = ask.keyIn(` ${Fed.name} is on to you! fight them off with [f], or try and get away with [x]`, {limit: 'fx'})
     if (action === 'x') {
          runAway()
-    }else{
+    } else {
         while(Fed.hp > 0 && you.hp > 0){
             fight(Fed)
         }  
@@ -79,33 +79,35 @@ function runAway(){
     }
 }
 
-    function fight(Fed){
+function fight(Fed){
         while (Fed.hp > 0 && you.hasWon === false ){
         if (you.hp <= 0){
             death()
         }
-            let random = Math.floor(Math.random()*5) +1
+        let random = Math.floor(Math.random()*5) +1
         if (random === 2) {
             console.log ("you missed!")
         } else {    
             Fed.hp -= you.attack()
             you.hp -= Fed.attack()
             console.log(`${Fed.name} busted a cap in you. ${you.name}'s hp is now ${you.hp}. ${Fed.name} got shot and hp is now ${Fed.hp}`)
-        } if (Fed.hp < 0){
-             fedDie();
+        } 
+        if (Fed.hp < 0){
+             fedDie(Fed);
         } 
     }
 }
-    function death(){
-        you.isAlive === false;
-        console.log('you died'); 
-    }
-
-    function fedDie(){
-    console.log(`You Took Them Out!`)
-    feds.splice();
+function death(){
+    you.isAlive === false;
+    console.log('you died'); 
 }
-    function win() {
-    (you.hasWon === true)
+
+function fedDie(fed){
+    console.log(`You Took Them Out!`)
+    let index = feds.indexOf(fed)
+    feds.splice(index, 1);
+}
+function win() {
+    you.hasWon = true
     console.log("You Won")
 }

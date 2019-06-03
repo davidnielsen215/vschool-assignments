@@ -1,0 +1,113 @@
+#flagimage1{
+    background-image: url("MexicanFlag.jpg");
+    filter: blur(5px);
+    -webkit-filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    height: 400px;
+    width: 100;
+}
+#flagimage2{
+    background-image: url("BritishFlag.jpg");
+    filter: blur(5px);
+    -webkit-filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    height: 400px;
+    width: 10%x;
+}
+#flagimage3{
+    background-image: url("ItalianFlag.jpg");
+    filter: blur(5px);
+    -webkit-filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    height: 400px;
+    width: 10%x;
+}
+.box1{
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.box2{
+    background-color: rgba(0,0,0, 0.6); 
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.box3{
+    background-color: rgba(0,0,0, 0.6); 
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+body{
+    background-color: black;
+}
+.button{
+    background-color: rgb(54, 69, 119);
+    padding-top: 10px;
+    height: 50px;
+    width: 20vw;
+    border: solid 2px white;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+
+   
+    
+}
+.button:hover{
+    background-color: rgb(6, 97, 243);
+    transition-duration: 0.4s;
+   
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 50pt;
+    background: rgb(0, 0, 0);
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.homebutton{
+align-content: center
+}
