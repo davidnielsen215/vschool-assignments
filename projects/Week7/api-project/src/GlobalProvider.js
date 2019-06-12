@@ -10,7 +10,9 @@ class GlobalProvider extends Component  {
             artist: '',
             song: '',
             lyric: '',
-            counter: 0 
+            counter: 0,
+            savedLyrics: [],
+            noLyric: ''
         }
     
         this.intervalID = null
@@ -23,31 +25,36 @@ class GlobalProvider extends Component  {
         e.preventDefault()
 
         this.setState({
-           
-            lyric: ''
+           lyric: ''
         })
 
           axios.get(`https://api.lyrics.ovh/v1/${this.state.artist}/${this.state.song}`).then(response => {
               console.log(response.data)
 
-            
+             
             if(response.data.lyrics === ''){
                   this.setState({
-                    lyric: 'No Results found'
+                    lyric: 'No Results found',
+                    noLyric: 'Make sure the song is spelled correctly. Some songs featuring other artists might not be available.'
                   })
                 
             }else {
+                let newText = response.data.lyrics.split('\n').map((item, i) => {
+                    return <p key={i}>{item}</p>;
+                });
+            // const normalLyrics = response.data.lyrics
+            // let updatedLyrics = normalLyrics.replace()
                 this.setState({
-                    lyric: response.data.lyrics
+                    lyric: newText
                 }) 
             
-                }
+            }
 
-            })
+        })
             
 
           this.intervalID = setInterval(this.checkReady, 1000)
-      }
+    }
 
 
         checkReady = () => {
@@ -57,17 +64,18 @@ class GlobalProvider extends Component  {
                 })
             }
                 console.log(this.state.lyric)
-            if (this.state.lyric !== 'Requesting Lyrics...' || this.state.counter === 14){
+            if (this.state.lyric !== 'Requesting Lyrics...' || this.state.counter === 17){
                 clearInterval(this.intervalID)
-                if (this.state.lyric === 'Requesting Lyrics...')
-                this.setState({
+                    if (this.state.lyric === 'Requesting Lyrics...')
+                    this.setState({
                     lyric: 'No Results found',
-                    counter: 0
+                    counter: 0,
+                    
                   })
                   else{
                       this.setState({
-                          counter: 0
-                      })
+                        counter: 0
+                    })
                 }
             }
             this.setState((prevState) => {
@@ -83,6 +91,20 @@ class GlobalProvider extends Component  {
                 [name]: value 
         }) 
       }
+
+      handleSave = () => {
+        this.setState(prevState => {
+            return{
+                savedLyric: [...prevState.lyric, prevState.saveLyric]
+            }
+        })
+      }
+    
+
+        
+     
+
+       
 
         render(){
         

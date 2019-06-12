@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
         return (
             <div>
             <nav className='navbar'>
-                <h1>Lyrical Genius</h1>
+                <h1 className='nav-head'>Lyrical Genius</h1>
             </nav>
                 </div>
             

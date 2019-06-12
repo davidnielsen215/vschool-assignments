@@ -6,6 +6,11 @@ const Saved = (props) => {
     return(
         <div>
             <Link to='/' className='btn1' >New Search</Link> 
+            <div className='saved-container'>
+                <h1>{props.artist}</h1>
+                <h2>{props.song}</h2>
+
+            </div>
         </div>
     )
 }

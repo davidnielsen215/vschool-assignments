@@ -1,0 +1,25 @@
+
+.res-txt{
+    height: 10vh;
+    font-size: 25px;
+    border-bottom: 1px solid white;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    line-height: 10vh;
+    background-size: cover;
+}
+
+.land-res{
+    font-size: 35px;
+    border-bottom: 1px solid white;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 15%;
+    padding-bottom: 15%;
+    line-height: 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 55% ;
+}
