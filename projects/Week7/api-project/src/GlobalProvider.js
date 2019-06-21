@@ -35,7 +35,7 @@ class GlobalProvider extends Component  {
             if(response.data.lyrics === ''){
                   this.setState({
                     lyric: 'No Results found',
-                    noLyric: 'Make sure the song is spelled correctly. Some songs featuring other artists might not be available.'
+                    // noLyric: 'Make sure the song is spelled correctly. Some songs featuring other artists might not be available.'
                   })
                 
             }else {
@@ -62,7 +62,7 @@ class GlobalProvider extends Component  {
                 this.setState({
                     lyric: 'Requesting Lyrics...'
                 })
-            }
+            } 
                 console.log(this.state.lyric)
             if (this.state.lyric !== 'Requesting Lyrics...' || this.state.counter === 17){
                 clearInterval(this.intervalID)

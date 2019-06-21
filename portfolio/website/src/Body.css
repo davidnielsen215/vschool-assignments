@@ -19,6 +19,7 @@ Body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 20% 55% ;
+    transition-duration: 1s;
 }
 
 .body-pt{
@@ -197,4 +198,6 @@ Body{
         height: 8vh;
     }
 }
+
+
 /* background: linear-gradient(to bottom, rgb(13, 84, 149),rgb(6, 190, 151));  */

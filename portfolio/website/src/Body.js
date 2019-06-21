@@ -1,18 +1,23 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import './Body.css'
+import Fade from 'react-reveal/Fade';
+
 
 class Body extends Component  {
 
     render() {
         return(
             <div>
+                <Fade>
                 <div className='land-txt'>
                     
                     <h1>My Name is David Nielsen, <br>    
                     </br>I'm a Jr. Web Developer     
                     </h1>
                 </div>
+                
+                
     
                 <div className='body-pt'>
                     <p className='bp-1'>
@@ -41,6 +46,7 @@ class Body extends Component  {
                         look like.
                     </p>
                 </div>
+                </Fade>
                 <div className='next-box'> 
                     <div className='pro-box'><Link to='/Projects' className='pro-lnk'>Projects</Link></div>
                     <div className='res-box'><Link to='/Resume' className='res-lnk'>Resume</Link></div>
