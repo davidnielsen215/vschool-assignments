@@ -1,7 +1,7 @@
 module.exports [
     {
-        charge: "murder",
         name: "Ceaser",
+        charge: "murder",
         class: "B",
         offense: "felony",
         reward: 5000
