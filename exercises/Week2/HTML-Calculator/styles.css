@@ -1,20 +1,26 @@
 body{
-    position: fixed;
-    left: 35%;
+position: center;
+margin: auto;
+left: 35%;
 }
 
 .container {
-    border: 3px solid red;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(143, 142, 142);
+    margin: auto;
     height: 100px;
     width: 300px;
     padding-top: 30px;
     padding-left: 10px;
 }
 h1{
-    color: blue;
+    color: rgb(73, 73, 73);
     text-align: center;
-
+    
 }
+
+
+
 /* .container1 {
     border: 3px red;
     height: 100px;
