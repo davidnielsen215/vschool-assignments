@@ -130,15 +130,21 @@ body{
 }
 
 .submit-btn{
-    position: absolute;
+    position: center;
+    justify-content: space-evenly;
+    margin-left: 70%;
+    padding-top: 10%;
+    margin-top: 80%;
+    background: white;
     left: 0%;
+    right: 40%;
     color: black;
     width: 125px;
     height: 40px;
     font-size: 30px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 7px solid black;
+    border: 5px solid black;
     padding: 8px;
     text-transform: uppercase;
     overflow: hidden;
@@ -148,21 +154,12 @@ body{
     transition: 1s all ease;
 }
 
-.submit-btn::before{
+.submit-btn:before{
     background: rgb(255, 255, 255);
-    content: "";
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    transition: 0.6s ease;
-    font-size: 15px;
+   
 }
 
-.submit-btn:hover::before{
+.submit-btn:hover:{
     width: 120%;
     height: 110%;
 }
@@ -295,16 +292,19 @@ body{
     }
     .main-container{
         border: 2px solid black;
-        width: 70%;
-        height: 70%;
+        width: 100vw;
+        height: 100vh;
         position: center;
-        padding-top: 8%;
-        /* margin-top: 5%; */
-        right: 2%;
-        /* align-items: center; */
+        padding-top: 0%;
+        margin: 0%;
+        padding-left: 0;
+        margin-right: 0;
+        right: 0%;
+        left: 0;
+        align-items: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 45% 45% ;
+        background-position: 50% 45% ;
     
     }
     
@@ -330,35 +330,37 @@ body{
 
     .search-box{
         position: absolute;
-        top: 35%;
+        top: 40%;
         /* left: 50%; */
         transform: translate(-50%, -50%);
         background:rgb(0, 0, 0);
         height: 40px;
         border-radius: 40px;
-        padding: 6px;
+        /* padding: 6px; */
+        width: 60vw;
     }
     
     .search-box:hover > .search-text{
-        width: 150px;
-        padding-left: 10px;
-        padding-right: 10px;
+        /* width: 150px; */
+        padding-left: 20px;
+        /* padding-right: 10px; */
     }
     
     .search-box:hover > .search-btn{
-        background: rgb(255, 255, 255);
-        margin-top: -42px;
+        background: rgb(0, 255, 13);
+        /* margin-top: -12px; */
     }
     
     .search-box2{
         position: absolute;
-        top: 47%;
-        left: 50%;
+        top: 55%;
+        /* left: 50%; */
         transform: translate(-50%, -50%);
         background:rgb(0, 0, 0);
         height: 40px;
         border-radius: 40px;
-        padding: 6px;
+        /* padding: 6px; */
+        width: 60vw;
     }
 
     .search-box2:hover > .search-text2{
@@ -368,8 +370,8 @@ body{
     }
     
     .search-box2:hover > .search-btn{
-        background: rgb(255, 255, 255);
-        margin-top: -42px;
+        background: rgb(0, 255, 13);
+        /* margin-top: -42px; */
         
     }
     
@@ -384,7 +386,7 @@ body{
         font-size: 22px;
         transition: 0.7s;
         line-height: 40px;
-        width: 0px;
+        /* width: 110px; */
     }
     .search-text2{
         border:none;
@@ -408,14 +410,15 @@ body{
     }
     
     .submit-btn{
-        margin-top: 30px;
-        margin-left: -53px;
+        margin-top: 140%;
+        margin-left: 50px;
+        background: white;
         color: black;
         width: 125px;
         height: 40px;
         font-size: 30px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: 7px solid black;
+        border: 4px solid black;
         text-transform: uppercase;
         overflow: hidden;
         text-decoration: none;
@@ -425,11 +428,12 @@ body{
     
     
     .lyric-artist{
+        padding-top: 25%;
         text-transform: uppercase;
         text-align: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: rgb(255, 255, 255);
-        text-shadow: 5px 3px black;
+        text-shadow: none;
     }
     
     .lyric-song{
@@ -437,22 +441,20 @@ body{
         text-align: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
-        text-shadow: 5px 5px black;
-        
-    
+        text-shadow: none;
     }
     
     .lyrics-container{
         text-align: center;
-        padding: 40px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: lighter;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 15px;
+        margin-right: 15px;
         color: white;
-        text-shadow: 3px 3px rgb(0, 0, 0);
+        text-shadow: none;
     }
+
     .error-container{
         text-align: center;
         padding: 40px;
@@ -487,21 +489,17 @@ body{
     }
     
     
-    .btn1:hover::before{
-        width: 120%;
-        height: 110%;
-    }
-    
     .btn2{
-        position: absolute;
-        left: 70%;
+        margin-top: 15px;
+        left: 65%;
+        background: white;
         color: black;
-        width: 130px;
+        width: 90px;
         height: 40px;
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: 7px solid black;
+        border: 2px solid black;
         padding: 8px;
         text-transform: uppercase;
         overflow: hidden;
@@ -511,24 +509,6 @@ body{
         transition: 1s all ease;
     }
     
-    .btn2::before{
-        background: rgb(255, 255, 255);
-        content: "";
-        width: 0%;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        transition: 0.6s ease;
-        font-size: 15px;
-    }
-    
-    .btn2:hover::before{
-        width: 120%;
-        height: 110%;
-    }
     
     .saved-container{
         text-align: center;
