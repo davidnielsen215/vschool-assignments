@@ -57,7 +57,7 @@ body{
     font-size: 22px;
     transition: 0.7s;
     line-height: 40px;
-    width: 100px;
+    width: 0px;
 }
 .search-text2{
     border:none;
@@ -94,7 +94,6 @@ body{
     padding: 6px;
 }
 .search-box:hover > .search-text{
-    height: 100px;
     width: 150px;
     padding-left: 10px;
     padding-right: 10px;
@@ -118,6 +117,7 @@ body{
     padding-top: none;
     
 }
+
 .search-btn{
     color:black;
     float: right;
